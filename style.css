@@ -1,0 +1,152 @@
+/*-------------------------------------index-------------------------------------*/
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: center;
+	margin: 50px;
+	font-size: 20px;
+}
+
+.body-index, .body-inscricoes, .body-finalizacao  {
+	background-image: url(grama.jpg);
+}
+
+h1 {
+	padding: 20px;
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 20px;
+	padding: 15px;
+	line-height: 30px;
+}
+
+label {
+	display: block;
+	font-size: 20px;
+	padding: 7px;
+}
+
+input {
+	width: 300px;
+}
+
+.enviar, .enviar2, .enviar3 {
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	font-size: 15px;
+	padding: 7px;
+	background-color: orange;
+	border: 2px solid black;
+	margin-top: 20px;
+}
+
+.enviar:hover {
+	background: darkorange; 
+}
+
+
+.form1, .form2, .form3 {
+	padding: 10px;
+	margin: 10px 0 20px 0;
+}
+
+.form-inicio {
+	margin: 50px;
+}
+
+.form1-div, .form3-div, .finalizacao-div {
+	background: radial-gradient(#EDFFF2, #D7FFE2, #C8FFD6, #A7E7B8);
+	padding: 5px;
+	border: 2px solid black;
+}
+
+a {
+	color: darkgreen;
+}
+
+a:hover {
+	color: green;
+}
+
+/*--------------------------------calculadora IMC--------------------------------*/
+
+.body-calculadora {
+	margin: 100px;
+	font-size: 20px;
+	background-image: url(background-amarelo.jpg);
+}
+
+.form2-div {
+	width: 50%;
+	border: 2px solid black;
+	background: radial-gradient(#FFF7DE, #FFEEBB, #FFE596);
+	padding: 50px;
+	margin: 0 auto;
+}
+
+.form2-label {
+	font-weight: bold; 
+}
+
+.redirecionar {
+	margin-top: 60px;
+	width: 50px;
+	padding: 5px;
+}
+
+.enviar2 {
+	margin-top: 10px;
+	width: 150px;
+	margin-bottom: 100px;
+}
+
+.enviar2:hover {
+	background: darkorange; 
+}
+
+table {
+	margin: 0 auto; 
+	background: white; 
+}
+
+thead {
+	font-weight: bold; 
+}
+
+td, th {
+	border: 2px solid #000000; 
+	padding: 8px 15px;
+	font-size: 25px;
+}
+
+
+/*----------------------------------inscrições-----------------------------------*/
+.form-inscricoes {
+	margin: 50px;
+	margin-bottom: 350px;
+}
+
+.enviar3:hover {
+	background: darkorange; 
+}
+
+
+/*--------------------------------finalização--------------------------------*/
+.body-finalizacao {
+
+}
+
+.finalizacao-div {
+	padding: 5px;
+	border: 2px solid black;
+}
+
+.finalizacao {
+	font-size: 25px;
+	margin: 50px;
+	margin-bottom: 450px;
+	line-height: 50px;
+}

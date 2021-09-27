@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Inscrições - 2ª fase</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+	</head>
+
+	<body class="body-inscricoes">
+		<div class="form3-div">
+			<h1>Inscrições - 2ª fase</h1>
+		    <p>Você passou na 1ª fase! Agora responda essas duas perguntas para continuar a sua inscrição.</p>
+
+		    <div class="form-inscricoes">
+		    	<label for="treino">Quantas vezes você treina por semana?</label>
+				<input type="number" id="treino" class="form3" required autofocus>
+
+				<label for="minutos">Aproximadamente quantos minutos por sessão de treino?</label>
+				<input type="number" id="minutos" class="form3" required>
+
+				<input type="submit" value="Enviar" class="enviar3" onclick="validaCampo()">
+		    </div>
+		</div>
+
+		<script>
+			var enviar = document.querySelector(".enviar3");
+
+			function validaCampo() {
+				var quantidadeDeTreino = document.getElementById("treino");
+				var quantidadeDeMinutos = document.getElementById("minutos");
+
+				var totalDeMinutos = quantidadeDeTreino.value * quantidadeDeMinutos.value;
+
+				if(quantidadeDeTreino.value == "") {
+					alert("Por favor, preencha todos os campos.");
+					return;
+				}
+
+				if(quantidadeDeMinutos.value == "") {
+					alert("Por favor, preencha todos os campos.");
+					return;
+				}
+
+				else if(totalDeMinutos < 300) {
+					location.href = "naoPassou2-finalizacao.html";
+					return;
+				} else {
+					location.href = "passou-finalizacao.html";
+					return false;
+				}
+			}
+
+		</script>
+	</body>
+</html>

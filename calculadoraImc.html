@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculadora de IMC</title>
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    </head>
+
+    <body class="body-calculadora"> 
+        <div class="form2-div">
+            <h1>Calculadora de IMC</h1>
+
+            <label for="altura" class="form2-label">Altura</label>
+            <input type="number" id="altura" class="form2" required placeholder="Sua altura(ex: 1,60)" autofocus>
+
+            <label for="peso" class="form2-label">Peso</label>
+            <input type="number" id="peso" class="form2" required placeholder="Seu peso(ex: 52,3)">
+
+            <input type="submit" value="Enviar" class="enviar2" onclick="exibeAlerta()">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Tabela IMC</th>
+                    </tr>
+                    <tr>
+                        <th>IMC</th>
+                        <th>Classificação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Menor que 18,5</th>
+                        <th>Abaixo do peso</th>
+                    </tr>
+
+                    <tr>
+                        <th>Entre 18,5 e 24,9</th>
+                        <th>Peso normal</th>
+                    </tr>
+
+                    <tr>
+                        <th>Entre 25 e 29,9</th>
+                        <th>Sobrepeso</th>
+                    </tr>
+
+                    <tr>
+                        <th>Entre 30 e 39,9</th>
+                        <th>Obesidade</th>
+                    </tr>
+
+                    <tr>
+                        <th>Maior que 40</th>
+                        <th>Obesidade grave</th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <input type="submit" value="Voltar" class="redirecionar" onclick="redireciona()">
+        </div>
+
+        <script>
+            var enviar = document.querySelector(".enviar2");
+            var redirecionar = document.querySelector(".redirecionar");
+
+            function exibeAlerta() {
+                var alturaInformada = document.getElementById("altura");
+                var pesoInformado = document.getElementById("peso");
+
+                var altura = alturaInformada.value;
+                var peso = pesoInformado.value;
+
+                var imc = Math.round((peso / (altura * altura)));
+
+                if(imc < 18.5) {
+                    alert("O seu IMC é " + imc + ". Você está abaixo do recomendado.");
+                }
+
+                if(imc > 24.9) {
+                    alert("O seu IMC é " + imc + ". Você está acima do recomendado.");
+                }
+
+                if(imc >= 18.5 && imc <= 24.9) {
+                    alert("O seu IMC é " + imc + ". Está excelente!");
+                }
+            }
+
+            function redireciona() {
+                location.href = "index.html"
+            }
+
+        </script>
+    </body>
+</html>
